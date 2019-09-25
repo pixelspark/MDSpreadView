@@ -656,7 +656,7 @@ static CGFloat MDPixel()
 - (void)_performInit
 {
     self.opaque = YES;
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor systemBackgroundColor];
     self.directionalLockEnabled = YES;
     
     _dequeuedCells = [[NSMutableArray alloc] init];
@@ -666,7 +666,7 @@ static CGFloat MDPixel()
     mapForRowHeaders = [[MDSpreadViewCellMap alloc] init];
     mapForCornerHeaders = [[MDSpreadViewCellMap alloc] init];
     
-    _rowHeight = 44; // 25
+    _rowHeight = 32; // 25
     _sectionRowHeaderHeight = 22;
     _sectionRowFooterHeight = 22;
     _columnWidth = 220;
@@ -674,7 +674,7 @@ static CGFloat MDPixel()
     _sectionColumnFooterWidth = 110;
     
     _separatorStyle = MDSpreadViewCellSeparatorStyleCorner;
-    _separatorColor = [UIColor colorWithWhite:0.9 alpha:1];
+	_separatorColor = [UIColor separatorColor];
     
     _selectedCells = [[NSMutableArray alloc] init];
     _sortDescriptors = [[NSMutableArray alloc] init];

@@ -129,7 +129,7 @@
     if (!aReuseIdentifier) return nil;
     if (self = [super initWithFrame:CGRectZero]) {
         self.opaque = YES;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor systemBackgroundColor];
         self.reuseIdentifier = aReuseIdentifier;
         self.multipleTouchEnabled = YES;
         //        self.layer.shouldRasterize = YES;
@@ -143,26 +143,26 @@
 //            self.backgroundView = imageView;
             
             UIView *view = [[UIView alloc] init];
-            view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.15];
+			view.backgroundColor = [UIColor tertiarySystemGroupedBackgroundColor];
             self.highlightedBackgroundView = view;
             
             UIView *selectedView = [[UIView alloc] init];
             _originalSelectedBackground = selectedView;
-            selectedView.backgroundColor = [self.tintColor colorWithAlphaComponent:0.15];
+            selectedView.backgroundColor = [UIColor tertiarySystemGroupedBackgroundColor];
             self.selectedBackgroundView = selectedView;
             
             UILabel *label = [[UILabel alloc] init];
             label.opaque = YES;
-            label.backgroundColor = [UIColor whiteColor];
+            label.backgroundColor = [UIColor systemBackgroundColor];
             label.font = [UIFont systemFontOfSize:16];
-            label.highlightedTextColor = [UIColor blackColor];
+            label.highlightedTextColor = [UIColor labelColor];
             self.textLabel = label;
             
             label = [[UILabel alloc] init];
             label.opaque = YES;
-            label.backgroundColor = [UIColor whiteColor];
+            label.backgroundColor = [UIColor systemBackgroundColor];
             label.font = [UIFont systemFontOfSize:16];
-            label.highlightedTextColor = [UIColor blackColor];
+            label.highlightedTextColor = [UIColor labelColor];
             self.detailTextLabel = label;
         } else {
             UIImageView *imageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"MDSpreadViewCell.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 2, 2, 2)]];
@@ -173,16 +173,16 @@
             
             UILabel *label = [[UILabel alloc] init];
             label.opaque = YES;
-            label.backgroundColor = [UIColor whiteColor];
+            label.backgroundColor = [UIColor systemBackgroundColor];
             label.font = [UIFont boldSystemFontOfSize:18];
-            label.highlightedTextColor = [UIColor blackColor];
+            label.highlightedTextColor = [UIColor labelColor];
             self.textLabel = label;
             
             label = [[UILabel alloc] init];
             label.opaque = YES;
-            label.backgroundColor = [UIColor whiteColor];
+            label.backgroundColor = [UIColor systemBackgroundColor];
             label.font = [UIFont boldSystemFontOfSize:18];
-            label.highlightedTextColor = [UIColor blackColor];
+            label.highlightedTextColor = [UIColor labelColor];
             self.detailTextLabel = label;
         }
         

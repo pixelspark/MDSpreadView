@@ -65,8 +65,8 @@
             UIView *newBackground = [[UIView alloc] init];
             UIView *newHighlightedBackground = [[UIView alloc] init];
             UIView *newSelectedBackground = [[UIView alloc] init];
-            newBackground.backgroundColor = [UIColor colorWithWhite:247./255. alpha:1];
-            newHighlightedBackground.backgroundColor = [UIColor colorWithWhite:210./255. alpha:1.];
+            newBackground.backgroundColor = [UIColor tertiarySystemGroupedBackgroundColor];
+			newHighlightedBackground.backgroundColor = [UIColor tertiarySystemGroupedBackgroundColor];
             newSelectedBackground.backgroundColor = [self.tintColor colorWithAlphaComponent:0.65];
             _originalSelectedBackground = newSelectedBackground;
             self.backgroundView = newBackground;
@@ -75,7 +75,7 @@
             
             self.textLabel.font = [UIFont boldSystemFontOfSize:14];
             self.textLabel.backgroundColor = self.backgroundView.backgroundColor;
-            self.textLabel.textColor = [UIColor blackColor];
+            self.textLabel.textColor = [UIColor labelColor];
             
             _sortIndicatorImage = [[UIImageView alloc] init];
             _sortIndicatorImage.contentMode = UIViewContentModeCenter;
@@ -107,10 +107,10 @@
             self.textLabel.font = [UIFont boldSystemFontOfSize:18];
             self.textLabel.opaque = NO;
             self.textLabel.backgroundColor = nil;
-            self.textLabel.textColor = [UIColor whiteColor];
-            self.textLabel.shadowColor = [UIColor colorWithWhite:0 alpha:0.4];
+            self.textLabel.textColor = [UIColor labelColor];
+			self.textLabel.shadowColor = [UIColor clearColor];
             self.textLabel.shadowOffset = CGSizeMake(0, 1);
-            self.textLabel.highlightedTextColor = [UIColor whiteColor];
+            self.textLabel.highlightedTextColor = [UIColor labelColor];
         }
     }
     return self;
